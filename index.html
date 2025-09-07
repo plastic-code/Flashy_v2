@@ -56,16 +56,21 @@
             color: #e5e7eb; /* gray-200 */
         }
         .tab-btn.active {
-            color: #22d3ee; /* cyan-400 */
-            border-bottom-color: #22d3ee; /* cyan-400 */
+            color: #b89e6a; /* New Gold Color */
+            border-bottom-color: #b89e6a; /* New Gold Color */
         }
+        /* Custom brand colors */
+        .text-brand-gold { color: #b89e6a; }
+        .border-brand-gold { border-color: #b89e6a; }
+        .bg-brand-gold-highlight { background-color: rgba(184, 158, 106, 0.15); }
+        .text-brand-gold-light { color: #d6c5a5; }
     </style>
 </head>
 <body class="bg-gray-900 text-white h-full flex flex-col antialiased">
 
     <!-- Header / Tab Navigation -->
     <header class="p-4 flex justify-between items-center border-b border-gray-700">
-        <h1 class="text-2xl font-bold text-cyan-400 hidden md:block">Flashy</h1>
+        <h1 class="text-2xl font-bold text-brand-gold hidden md:block">Flashy</h1>
         <nav id="tab-nav" class="flex justify-center space-x-2 md:space-x-6 lg:space-x-8 w-full">
             <button class="tab-btn active" data-slide-index="0">Snapshot</button>
             <button class="tab-btn" data-slide-index="1">Content OS & Market</button>
@@ -85,19 +90,19 @@
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Company Snapshot</h2>
                 <div class="space-y-4">
                     <div>
-                        <h3 class="text-cyan-400 font-semibold mb-1 text-lg">What it is</h3>
+                        <h3 class="text-brand-gold font-semibold mb-1 text-lg">What it is</h3>
                         <p class="text-gray-300 text-base">Flashy is an AI-native content operations platform. The company runs a profitable services marketplace (“Flashy Services”) and is launching Flashy OS, an all-in-one Content OS combining DAM, AI editing, collaboration, and publishing.</p>
                     </div>
                     <div>
-                        <h3 class="text-cyan-400 font-semibold mb-1 text-lg">Where it stands</h3>
+                        <h3 class="text-brand-gold font-semibold mb-1 text-lg">Where it stands</h3>
                         <p class="text-gray-300 text-base">450+ business clients across UAE, KSA, Qatar; 600+ vetted creators. Services turned profitable in H1’25; OS pre-launch with early adopters and design partners.</p>
                     </div>
                     <div>
-                        <h3 class="text-cyan-400 font-semibold mb-1 text-lg">What they’re raising</h3>
+                        <h3 class="text-brand-gold font-semibold mb-1 text-lg">What they’re raising</h3>
                         <p class="text-gray-300 text-base">$5M Series A to scale Flashy OS, go-to-market, and regional expansion.</p>
                     </div>
                     <div>
-                        <h3 class="text-cyan-400 font-semibold mb-1 text-lg">Why now</h3>
+                        <h3 class="text-brand-gold font-semibold mb-1 text-lg">Why now</h3>
                         <p class="text-gray-300 text-base">MENA is the fastest-growing DAM region globally; incumbents are costly/complex; mid-market needs an integrated AI-first alternative.</p>
                     </div>
                 </div>
@@ -107,11 +112,11 @@
             <div id="slide-2" class="slide p-8 md:p-12 h-full flex flex-col justify-center rounded-2xl glass-effect">
                  <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Content OS & Market Sizing</h2>
                  <div>
-                     <h3 class="text-cyan-400 font-semibold mb-2 text-lg">What is a “Content OS”</h3>
+                     <h3 class="text-brand-gold font-semibold mb-2 text-lg">What is a “Content OS”</h3>
                      <p class="text-gray-300 mb-4">Unified platform for the full lifecycle: DAM (store/search/tag/version), AI search & editing (image/video), collaboration/approvals, publishing/scheduling, and analytics—in one system (vs. 3–5 separate tools).</p>
                  </div>
 
-                <h3 class="text-cyan-400 font-semibold mb-2 text-lg">TAM & Adjacent Markets</h3>
+                <h3 class="text-brand-gold font-semibold mb-2 text-lg">TAM & Adjacent Markets</h3>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                      <div class="bg-gray-800/50 p-3 rounded-lg text-center">
                          <h4 class="font-bold text-white text-sm">Digital Asset Management (DAM)</h4>
@@ -147,7 +152,7 @@
                       </div>
                  </div>
 
-                  <div class="mt-4 bg-cyan-900/30 text-cyan-200 p-4 rounded-lg">
+                  <div class="mt-4 bg-brand-gold-highlight text-brand-gold-light p-4 rounded-lg">
                     <h4 class="font-bold">Positioning: Why Flashy Can Capture It</h4>
                     <p class="text-sm">All-in-one, AI-native OS at mid-market pricing. Installed GCC footprint (450+ customers) to seed SaaS upsell. Time-to-value advantage vs. enterprise DAMs and feature-gapped schedulers.</p>
                 </div>
@@ -159,7 +164,7 @@
                 <div class="flex-grow grid grid-cols-1 lg:grid-cols-5 gap-4">
                     <!-- Marketplace Revenue -->
                     <div class="lg:col-span-2 bg-gray-800/50 p-4 rounded-lg flex flex-col">
-                        <h3 class="text-cyan-400 font-bold text-lg mb-2">Marketplace Revenue (Current)</h3>
+                        <h3 class="text-brand-gold font-bold text-lg mb-2">Marketplace Revenue (Current)</h3>
                         <p class="text-gray-300 text-sm mb-3">Commission-based model on client–creator transactions.</p>
                         <div class="space-y-3 text-sm">
                             <p><strong class="text-white">AOV (Real estate):</strong> ~$110</p>
@@ -175,7 +180,7 @@
 
                     <!-- SaaS Revenue -->
                     <div class="lg:col-span-3">
-                        <h3 class="text-cyan-400 font-bold text-lg mb-2">SaaS Revenue (Flashy OS — Launching)</h3>
+                        <h3 class="text-brand-gold font-bold text-lg mb-2">SaaS Revenue (Flashy OS — Launching)</h3>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
                             <div class="bg-gray-800/50 p-3 rounded-lg">
                                 <h4 class="font-bold text-white">Freemium ($0/mo)</h4>
@@ -194,7 +199,7 @@
                                 <p class="text-gray-400">Unlimited storage, custom AI models, advanced security & compliance, SLAs.</p>
                             </div>
                         </div>
-                         <div class="mt-3 text-center bg-cyan-900/30 text-cyan-200 p-3 rounded-lg">
+                         <div class="mt-3 text-center bg-brand-gold-highlight text-brand-gold-light p-3 rounded-lg">
                             <p class="text-sm font-semibold">Scalable upgrade path from Freemium to Enterprise supports sustainable ARR growth across segments.</p>
                         </div>
                     </div>
@@ -204,7 +209,7 @@
             <!-- Slide 4: Competitive Landscape -->
             <div id="slide-4" class="slide p-8 md:p-12 h-full flex flex-col justify-center rounded-2xl glass-effect">
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Competitive Landscape</h2>
-                <blockquote class="border-l-4 border-cyan-400 pl-4 py-2 my-4 text-gray-300 italic">
+                <blockquote class="border-l-4 border-brand-gold pl-4 py-2 my-4 text-gray-300 italic">
                     Flashy is the only platform that covers the full lifecycle—AI editing, DAM, scheduling, multi-platform resizing, team collaboration, AI generation, and content booking—starting at $99/mo.
                 </blockquote>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mt-4">
@@ -225,7 +230,7 @@
                     </div>
                 </div>
                  <div class="mt-6 bg-gray-800/50 p-4 rounded-lg">
-                    <h3 class="font-bold text-cyan-400 mb-2">Flashy OS Differentiation</h3>
+                    <h3 class="font-bold text-brand-gold mb-2">Flashy OS Differentiation</h3>
                     <p class="text-gray-300">Integrated lifecycle (DAM → Edit → Approve → Publish → Analyze), AI throughout, performance-linked DAM, mid-market price, and strong GCC focus.</p>
                 </div>
             </div>
@@ -235,25 +240,25 @@
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-8">Traction & Key Metrics</h2>
                 <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
                     <div class="bg-gray-800/50 p-6 rounded-lg">
-                        <p class="text-4xl font-bold text-cyan-400">450+</p>
+                        <p class="text-4xl font-bold text-brand-gold">450+</p>
                         <p class="text-gray-300 mt-2">Business Clients Across GCC</p>
                     </div>
                     <div class="bg-gray-800/50 p-6 rounded-lg">
-                        <p class="text-4xl font-bold text-cyan-400">600+</p>
+                        <p class="text-4xl font-bold text-brand-gold">600+</p>
                         <p class="text-gray-300 mt-2">Vetted Creators</p>
                     </div>
                      <div class="bg-gray-800/50 p-6 rounded-lg">
-                        <p class="text-4xl font-bold text-cyan-400">6k+</p>
+                        <p class="text-4xl font-bold text-brand-gold">6k+</p>
                         <p class="text-gray-300 mt-2">Projects Completed</p>
                     </div>
                     <div class="bg-gray-800/50 p-6 rounded-lg">
-                        <p class="text-4xl font-bold text-cyan-400">1M+</p>
+                        <p class="text-4xl font-bold text-brand-gold">1M+</p>
                         <p class="text-gray-300 mt-2">Visual Assets Produced</p>
                     </div>
                 </div>
                 <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
                      <div class="bg-gray-800/50 p-6 rounded-lg">
-                        <h3 class="text-cyan-400 font-bold mb-2">Unit Economics (Services)</h3>
+                        <h3 class="text-brand-gold font-bold mb-2">Unit Economics (Services)</h3>
                         <div class="flex justify-around text-center">
                             <div><p class="font-bold text-2xl text-white">7.1x</p><p class="text-gray-400 text-sm">LTV:CAC</p></div>
                             <div><p class="font-bold text-2xl text-white">102%</p><p class="text-gray-400 text-sm">NRR</p></div>
@@ -261,7 +266,7 @@
                         </div>
                      </div>
                      <div class="bg-gray-800/50 p-6 rounded-lg">
-                        <h3 class="text-cyan-400 font-bold mb-2">Key Verticals & Logos</h3>
+                        <h3 class="text-brand-gold font-bold mb-2">Key Verticals & Logos</h3>
                         <p class="text-gray-300">Strong presence in Real Estate, Hospitality, Education, and Retail with enterprise & mid-market accounts across the GCC.</p>
                     </div>
                 </div>
@@ -272,7 +277,7 @@
                 <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Use of Funds & Cap Table</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
-                        <h3 class="text-cyan-400 font-semibold mb-3 text-xl">Use of Funds (Series A $5M)</h3>
+                        <h3 class="text-brand-gold font-semibold mb-3 text-xl">Use of Funds (Series A $5M)</h3>
                         <ul class="space-y-3">
                             <li>
                                 <p class="font-bold text-white">40% — Product Development</p>
@@ -293,7 +298,7 @@
                         </ul>
                     </div>
                     <div>
-                         <h3 class="text-cyan-400 font-semibold mb-3 text-xl">Cap Table (Post-Financing)</h3>
+                         <h3 class="text-brand-gold font-semibold mb-3 text-xl">Cap Table (Post-Financing)</h3>
                          <p class="text-gray-400 mb-4 text-sm">Fully diluted headline percentages:</p>
                         <div class="space-y-2 text-base">
                             <div class="flex justify-between"><span class="text-gray-300">Founders (combined)</span> <span class="font-bold text-white">52.27%</span></div>
@@ -352,7 +357,4 @@
 
 </body>
 </html>
-
-
-
 
