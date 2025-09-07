@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashy Pitch Deck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .slide.active {
+            display: block;
+            opacity: 1;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .tab-btn {
+            background: none;
+            border: none;
+            color: #9ca3af; /* gray-400 */
+            padding: 1rem 0.5rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s, border-color 0.3s;
+            border-bottom: 2px solid transparent;
+            white-space: nowrap;
+        }
+        @media (min-width: 768px) {
+            .tab-btn {
+                font-size: 1rem;
+                padding: 1rem;
+            }
+        }
+        .tab-btn:hover {
+            color: #e5e7eb; /* gray-200 */
+        }
+        .tab-btn.active {
+            color: #22d3ee; /* cyan-400 */
+            border-bottom-color: #22d3ee; /* cyan-400 */
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white h-full flex flex-col antialiased">
+
+    <!-- Header / Tab Navigation -->
+    <header class="p-4 flex justify-between items-center border-b border-gray-700">
+        <h1 class="text-2xl font-bold text-cyan-400 hidden md:block">Flashy</h1>
+        <nav id="tab-nav" class="flex justify-center space-x-2 md:space-x-6 lg:space-x-8 w-full">
+            <button class="tab-btn active" data-slide-index="0">Snapshot</button>
+            <button class="tab-btn" data-slide-index="1">Content OS & Market</button>
+            <button class="tab-btn" data-slide-index="2">Business Model</button>
+            <button class="tab-btn" data-slide-index="3">Competition</button>
+            <button class="tab-btn" data-slide-index="4">Traction</button>
+            <button class="tab-btn" data-slide-index="5">Use of Funds</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="presentation-container" class="flex-grow flex items-center justify-center p-4 md:p-8">
+        <div class="w-full max-w-5xl mx-auto aspect-[16/9] relative">
+
+            <!-- Slide 1: Company Snapshot -->
+            <div id="slide-1" class="slide active p-8 md:p-12 h-full flex flex-col justify-center rounded-2xl glass-effect">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Company Snapshot</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-cyan-400 font-semibold mb-1 text-lg">What it is</h3>
+                        <p class="text-gray-300 text-base">Flashy is an AI-native content operations platform. The company runs a profitable services marketplace (“Flashy Services”) and is launching Flashy OS, an all-in-one Content OS combining DAM, AI editing, collaboration, and publishing.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-cyan-400 font-semibold mb-1 text-lg">Where it stands</h3>
+                        <p class="text-gray-300 text-base">450+ business clients across UAE, KSA, Qatar; 600+ vetted creators. Services turned profitable in H1’25; OS pre-launch with early adopters and design partners.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-cyan-400 font-semibold mb-1 text-lg">What they’re raising</h3>
+                        <p class="text-gray-300 text-base">$5M Series A to scale Flashy OS, go-to-market, and regional expansion.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-cyan-400 font-semibold mb-1 text-lg">Why now</h3>
+                        <p class="text-gray-300 text-base">MENA is the fastest-growing DAM region globally; incumbents are costly/complex; mid-market needs an integrated AI-first alternative.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: Content OS & Market Sizing -->
+            <div id="slide-2" class="slide p-8 md:p-12 h-full flex flex-col justify-center rounded-2xl glass-effect">
+                 <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Content OS & Market Sizing</h2>
+                 <div>
+                     <h3 class="text-cyan-400 font-semibold mb-2 text-lg">What is a “Content OS”</h3>
+                     <p class="text-gray-300 mb-4">Unified platform for the full lifecycle: DAM (store/search/tag/version), AI search & editing (image/video), collaboration/approvals, publishing/scheduling, and analytics—in one system (vs. 3–5 separate tools).</p>
+                 </div>
+
+                <h3 class="text-cyan-400 font-semibold mb-2 text-lg">TAM & Adjacent Markets</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                     <div class="bg-gray-800/50 p-3 rounded-lg text-center">
+                         <h4 class="font-bold text-white text-sm">Digital Asset Management (DAM)</h4>
+                         <p class="text-gray-300 text-xl font-semibold">$23B</p>
+                         <p class="text-gray-400 text-xs">by 2029 (~26% CAGR)</p>
+                     </div>
+                     <div class="bg-gray-800/50 p-3 rounded-lg text-center">
+                         <h4 class="font-bold text-white text-sm">AI-Powered Content Creation</h4>
+                         <p class="text-gray-300 text-xl font-semibold">$7.9B</p>
+                         <p class="text-gray-400 text-xs">by 2033 (~7.7% CAGR)</p>
+                     </div>
+                     <div class="bg-gray-800/50 p-3 rounded-lg text-center">
+                         <h4 class="font-bold text-white text-sm">Web Content Management</h4>
+                         <p class="text-gray-300 text-xl font-semibold">$28.76B</p>
+                          <p class="text-gray-400 text-xs">by 2032</p>
+                     </div>
+                </div>
+
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4 text-sm mt-4">
+                      <div>
+                         <h4 class="font-semibold text-white mb-1">Adoption & Budget Signals</h4>
+                         <ul class="list-disc list-inside text-gray-400 space-y-1">
+                             <li><strong>83.2%</strong> of marketers use AI to create content.</li>
+                             <li><strong>68%</strong> report higher content-marketing ROI after adopting AI.</li>
+                         </ul>
+                      </div>
+                      <div>
+                         <h4 class="font-semibold text-white mb-1">Regional Context (Flashy's Wedge)</h4>
+                         <ul class="list-disc list-inside text-gray-400 space-y-1">
+                            <li><strong>MENA:</strong> High-growth wedge supported by national digitization agendas (e.g., KSA Vision 2030).</li>
+                            <li>Underserved mid-market that needs AI-first, lower-TCO stacks.</li>
+                         </ul>
+                      </div>
+                 </div>
+
+                  <div class="mt-4 bg-cyan-900/30 text-cyan-200 p-4 rounded-lg">
+                    <h4 class="font-bold">Positioning: Why Flashy Can Capture It</h4>
+                    <p class="text-sm">All-in-one, AI-native OS at mid-market pricing. Installed GCC footprint (450+ customers) to seed SaaS upsell. Time-to-value advantage vs. enterprise DAMs and feature-gapped schedulers.</p>
+                </div>
+            </div>
+
+            <!-- Slide 3: Business Model -->
+            <div id="slide-3" class="slide p-6 md:p-8 h-full flex flex-col justify-center rounded-2xl glass-effect overflow-y-auto">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Business Model & Revenue Streams</h2>
+                <div class="flex-grow grid grid-cols-1 lg:grid-cols-5 gap-4">
+                    <!-- Marketplace Revenue -->
+                    <div class="lg:col-span-2 bg-gray-800/50 p-4 rounded-lg flex flex-col">
+                        <h3 class="text-cyan-400 font-bold text-lg mb-2">Marketplace Revenue (Current)</h3>
+                        <p class="text-gray-300 text-sm mb-3">Commission-based model on client–creator transactions.</p>
+                        <div class="space-y-3 text-sm">
+                            <p><strong class="text-white">AOV (Real estate):</strong> ~$110</p>
+                            <p><strong class="text-white">AOV (Hospitality):</strong> ~$1,217</p>
+                            <p><strong class="text-white">Gross Profit Margin:</strong> 71% (2024), up from 55% (2022)</p>
+                             <p><strong class="text-white">Acquisition:</strong> Direct sales + digital marketing</p>
+                        </div>
+                        <div class="mt-auto pt-4">
+                             <h4 class="font-semibold text-white mb-1">Industry Tailoring</h4>
+                             <p class="text-gray-400 text-xs"><strong>E-commerce:</strong> AI product images, auto-branding<br><strong>Marketing/Ad:</strong> Workflow automation, high-volume ops<br><strong>Media/Ent:</strong> Large storage, fast processing</p>
+                        </div>
+                    </div>
+
+                    <!-- SaaS Revenue -->
+                    <div class="lg:col-span-3">
+                        <h3 class="text-cyan-400 font-bold text-lg mb-2">SaaS Revenue (Flashy OS — Launching)</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+                            <div class="bg-gray-800/50 p-3 rounded-lg">
+                                <h4 class="font-bold text-white">Freemium ($0/mo)</h4>
+                                <p class="text-gray-400">5 GB storage, basic AI, watermarked outputs. Frictionless onboarding to drive upgrades.</p>
+                            </div>
+                            <div class="bg-gray-800/50 p-3 rounded-lg">
+                                <h4 class="font-bold text-white">Pro ($50-100/mo)</h4>
+                                <p class="text-gray-400">~100-200 GB, 5 users, advanced AI credits, multi-platform publishing.</p>
+                            </div>
+                            <div class="bg-gray-800/50 p-3 rounded-lg">
+                                <h4 class="font-bold text-white">Business ($250-300/mo)</h4>
+                                <p class="text-gray-400">~1-3 TB, 10+ users, unlimited AI tagging, workflow automation, API access.</p>
+                            </div>
+                            <div class="bg-gray-800/50 p-3 rounded-lg">
+                                <h4 class="font-bold text-white">Enterprise (Custom)</h4>
+                                <p class="text-gray-400">Unlimited storage, custom AI models, advanced security & compliance, SLAs.</p>
+                            </div>
+                        </div>
+                         <div class="mt-3 text-center bg-cyan-900/30 text-cyan-200 p-3 rounded-lg">
+                            <p class="text-sm font-semibold">Scalable upgrade path from Freemium to Enterprise supports sustainable ARR growth across segments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Competitive Landscape -->
+            <div id="slide-4" class="slide p-8 md:p-12 h-full flex flex-col justify-center rounded-2xl glass-effect">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-4">Competitive Landscape</h2>
+                <blockquote class="border-l-4 border-cyan-400 pl-4 py-2 my-4 text-gray-300 italic">
+                    Flashy is the only platform that covers the full lifecycle—AI editing, DAM, scheduling, multi-platform resizing, team collaboration, AI generation, and content booking—starting at $99/mo.
+                </blockquote>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm mt-4">
+                    <div>
+                        <h3 class="font-bold text-white mb-1">Enterprise DAMs</h3>
+                        <p class="text-gray-400">(Adobe AEM, Bynder, Brandfolder)</p>
+                        <p class="text-gray-300 mt-1">Powerful but expensive & complex. Limited native AI & creation tools.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white mb-1">Social/Publishing Tools</h3>
+                        <p class="text-gray-400">(Hootsuite, Later)</p>
+                        <p class="text-gray-300 mt-1">Strong scheduling but weak DAM, creation, and approval workflows.</p>
+                    </div>
+                     <div>
+                        <h3 class="font-bold text-white mb-1">Point Solutions</h3>
+                        <p class="text-gray-400">(Cloudinary, Typeface, Soona)</p>
+                        <p class="text-gray-300 mt-1">Narrow scope leads to integration gaps across the content lifecycle.</p>
+                    </div>
+                </div>
+                 <div class="mt-6 bg-gray-800/50 p-4 rounded-lg">
+                    <h3 class="font-bold text-cyan-400 mb-2">Flashy OS Differentiation</h3>
+                    <p class="text-gray-300">Integrated lifecycle (DAM → Edit → Approve → Publish → Analyze), AI throughout, performance-linked DAM, mid-market price, and strong GCC focus.</p>
+                </div>
+            </div>
+
+            <!-- Slide 5: Traction -->
+            <div id="slide-5" class="slide p-8 md:p-12 h-full flex flex-col justify-center rounded-2xl glass-effect">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-8">Traction & Key Metrics</h2>
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div class="bg-gray-800/50 p-6 rounded-lg">
+                        <p class="text-4xl font-bold text-cyan-400">450+</p>
+                        <p class="text-gray-300 mt-2">Business Clients Across GCC</p>
+                    </div>
+                    <div class="bg-gray-800/50 p-6 rounded-lg">
+                        <p class="text-4xl font-bold text-cyan-400">600+</p>
+                        <p class="text-gray-300 mt-2">Vetted Creators</p>
+                    </div>
+                     <div class="bg-gray-800/50 p-6 rounded-lg">
+                        <p class="text-4xl font-bold text-cyan-400">6k+</p>
+                        <p class="text-gray-300 mt-2">Projects Completed</p>
+                    </div>
+                    <div class="bg-gray-800/50 p-6 rounded-lg">
+                        <p class="text-4xl font-bold text-cyan-400">1M+</p>
+                        <p class="text-gray-300 mt-2">Visual Assets Produced</p>
+                    </div>
+                </div>
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                     <div class="bg-gray-800/50 p-6 rounded-lg">
+                        <h3 class="text-cyan-400 font-bold mb-2">Unit Economics (Services)</h3>
+                        <div class="flex justify-around text-center">
+                            <div><p class="font-bold text-2xl text-white">7.1x</p><p class="text-gray-400 text-sm">LTV:CAC</p></div>
+                            <div><p class="font-bold text-2xl text-white">102%</p><p class="text-gray-400 text-sm">NRR</p></div>
+                            <div><p class="font-bold text-2xl text-white">4.5</p><p class="text-gray-400 text-sm">Months CAC Payback</p></div>
+                        </div>
+                     </div>
+                     <div class="bg-gray-800/50 p-6 rounded-lg">
+                        <h3 class="text-cyan-400 font-bold mb-2">Key Verticals & Logos</h3>
+                        <p class="text-gray-300">Strong presence in Real Estate, Hospitality, Education, and Retail with enterprise & mid-market accounts across the GCC.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 6: Use of Funds & Cap Table -->
+            <div id="slide-6" class="slide p-8 md:p-12 h-full flex flex-col justify-center rounded-2xl glass-effect">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6">Use of Funds & Cap Table</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-cyan-400 font-semibold mb-3 text-xl">Use of Funds (Series A $5M)</h3>
+                        <ul class="space-y-3">
+                            <li>
+                                <p class="font-bold text-white">40% — Product Development</p>
+                                <p class="text-gray-400 text-sm ml-8">AI tools, workflow automation, publishing.</p>
+                            </li>
+                            <li>
+                                <p class="font-bold text-white">30% — Sales & Marketing</p>
+                                <p class="text-gray-400 text-sm ml-8">MENA → EU/APAC demand gen, SDRs, partnerships.</p>
+                            </li>
+                             <li>
+                                <p class="font-bold text-white">20% — Team Expansion</p>
+                                <p class="text-gray-400 text-sm ml-8">Product, CS, sales engineering.</p>
+                            </li>
+                             <li>
+                                <p class="font-bold text-white">10% — Operational Scaling</p>
+                                <p class="text-gray-400 text-sm ml-8">Infra & internal systems; 99.9% uptime.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                         <h3 class="text-cyan-400 font-semibold mb-3 text-xl">Cap Table (Post-Financing)</h3>
+                         <p class="text-gray-400 mb-4 text-sm">Fully diluted headline percentages:</p>
+                        <div class="space-y-2 text-base">
+                            <div class="flex justify-between"><span class="text-gray-300">Founders (combined)</span> <span class="font-bold text-white">52.27%</span></div>
+                            <div class="flex justify-between"><span class="text-gray-300">Series A investors (new round)</span> <span class="font-bold text-white">13.46%</span></div>
+                            <div class="flex justify-between"><span class="text-gray-300">TA Ventures</span> <span class="font-bold text-white">9.57%</span></div>
+                            <div class="flex justify-between"><span class="text-gray-300">Trilight Investment Ltd</span> <span class="font-bold text-white">3.57%</span></div>
+                            <div class="flex justify-between"><span class="text-gray-300">Swiss Founders Fund</span> <span class="font-bold text-white">3.32%</span></div>
+                            <div class="flex justify-between"><span class="text-gray-300">ESOP pool</span> <span class="font-bold text-white">10.00%</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('.slide');
+            const tabs = document.querySelectorAll('.tab-btn');
+            
+            let currentSlide = 0;
+
+            function goToSlide(slideIndex) {
+                currentSlide = slideIndex;
+
+                // Toggle active slide
+                slides.forEach((slide, index) => {
+                    if (index === currentSlide) {
+                        slide.classList.add('active');
+                    } else {
+                        slide.classList.remove('active');
+                    }
+                });
+                
+                // Toggle active tab
+                tabs.forEach((tab, index) => {
+                    if (index === currentSlide) {
+                        tab.classList.add('active');
+                    } else {
+                        tab.classList.remove('active');
+                    }
+                });
+            }
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const slideIndex = parseInt(tab.dataset.slideIndex);
+                    goToSlide(slideIndex);
+                });
+            });
+
+            // Initial setup
+            goToSlide(0);
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
